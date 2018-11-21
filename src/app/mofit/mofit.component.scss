@@ -1,0 +1,57 @@
+#moFits {
+  color: white;
+  position: absolute; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 1800px;  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -9999;
+  background-color: black;
+  //opacity: 0.5;
+}
+
+@font-face {
+  font-family: mealFont;
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+.meal-class {
+  text-align: center;
+  font-family: mealFont;
+  margin-bottom: 100px;
+}
+
+.margin_top_50 {
+  margin-top: 150px;
+}
+
+.background-image-class {
+  position: fixed;
+  opacity: 0.8;
+  filter: blur(10px);
+  width: 100%;
+  // transform: scaleX(-1);
+  z-index: -4;
+}
+
+#videoPlayer {
+  width: 100%;
+  cursor: pointer;
+}
+
+.back_button {
+  width: 50px;
+  margin: 15px 15px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.menu-animation img:hover {
+  animation: triggerMenu 0.2s ease-in-out forwards;
+}
+
+@keyframes triggerMenu {
+  100%{transform: rotate(90deg)}
+}

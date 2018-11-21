@@ -1,0 +1,19 @@
+@font-face {
+  font-family: mermaid;
+  src: url(../../fonts/Mermaid.ttf)
+}
+.menu {
+  position: fixed;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-family: mermaid;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.moveIt {
+  transform: translate(200px, 200px);
+}
+
+

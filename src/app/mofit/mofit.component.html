@@ -1,0 +1,24 @@
+<div id="moFits">
+  <app-menu  *ngIf="toggle"></app-menu>
+  <img class="background-image-class" src="../../assets/imgs/mofit_profile_main.jpg" alt="">
+  <div class="menu-animation">
+    <img
+      (click)="showMenu()"
+      class="back_button"
+      src="../../assets/imgs/BackButtonFit.png"
+      alt="back_button">
+  </div>
+  <div class="meal-class">
+    <h1>Our Workout Plans</h1>
+    <h3>Created for people who love fitness. Designed to fit your lifestyle.</h3>
+    <h5>You can always mix and match workouts across the platform to form what works for you.</h5>
+  </div>
+  <div *ngFor="let mofit of moFits?.WORKOUTS" class="margin_top_50">
+    <div class="col-xs-6">
+      <video (click)="handleVideoSelected($event.target)" autoplay [muted]="true" id="videoPlayer" #videoPlayer>
+        <source #videoSource [src]="mofit.VIDEO" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,35 @@
+<app-menu *ngIf="toggleMenu"></app-menu>
+<main id="background">
+  <img [hidden]="show"  class="background-image-class" src="../../assets/imgs/pink_flower.jpeg" alt="">
+  <div [@menuAnimation]="state">
+    <div [@menuAnimation]="stateFade" id="overlay" (click)="showMenu($event)"></div>
+    <div id="photos">
+      <div [@photosAnimation]="moriahFits.length" (@photosAnimation.start)="onRepeat($event)" class="row">
+        <div *ngFor="let pics of moriahFits" class="column">
+          <img class="fit" [src]="pics?.VALUE" alt="">
+        </div>
+
+        <div  *ngFor="let pics of moriahSweets"  class="column">
+          <img [src]="pics.VALUE" alt="">
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <h1 class="titleFont"><span class="point"></span>Moriah D Wade.com</h1>
+      <br>
+      <h2 class="subTitle">"ON A mission to enhance mind, body, and spirit."</h2>
+      <div (click)="showMenu($event)">
+          <div class="enter-icon"></div>
+          <div class="enter-hover"></div>
+      </div>
+    </div>
+    <footer class="atBottom">
+      Copyright © 2018 Moriah D Wade
+    </footer>
+  </div>
+</main>
+
+
+
+
+

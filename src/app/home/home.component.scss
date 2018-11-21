@@ -1,0 +1,331 @@
+.homeBackground {
+  // background-image: linear-gradient(to right top, #62054a, #4b0f3c, #36122e, #23111f, #100a0f);
+  // background-image: linear-gradient(to right top, #87166a, #671652, #49143b, #2d0f25, #14020f);
+  overflow: hidden;
+}
+
+.showMenu {
+  opacity: 1;
+  animation: trigger 1s ease-in-out forwards;
+}
+
+@keyframes trigger {
+  100%{transform: translateY(300px) scale(0.3)}
+}
+
+.point {
+  position: fixed;
+  top: 140px;
+  width: 1px;
+  height: 1px;
+  background: white;
+  opacity: 1;
+  transition: width 1s ease-in-out;
+  -webkit-animation: draw-line 0.5s 2.4s ease-in-out forwards;
+}
+
+
+@keyframes growMe {
+  0%{transform: scale(0)}
+  100%{transform: scale(1.1)}
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+
+.menu-column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 100%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+
+.jumbotron {
+  width: 15%;
+  height: 300px;
+  border-radius: 5px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+@font-face {
+  font-family: mainTitleFont;
+  src: url(../fonts/Melinda.ttf);
+}
+
+.fadeTheImg:hover {
+  opacity: 0;
+}
+
+@font-face {
+  font-family: subtitleFont;
+  src: url(../fonts/Neou-Bold.otf);
+}
+
+.shopping_button {
+  margin: 15px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.menu-container {
+  opacity: 1;
+  transition: all 2s;
+}
+
+.enter-icon {
+  opacity: 1;
+  background-image: url("../../assets/imgs/Enter_Design.png");
+  width: 100px;
+  height: 99px;
+  cursor: pointer;
+  position: fixed;
+  left: 650px;
+}
+
+.enter-icon:hover {
+  opacity: 0;
+  transition: all 1s;
+}
+.enter-hover:hover {
+  opacity: 0.5;
+  transition: all 1s;
+}
+
+.enter-hover {
+  opacity: 0;
+  background-image: url("../../assets/imgs/Enter_Design_Hover.png");
+  width: 100px;
+  height: 99px;
+  cursor: pointer;
+  position: fixed;
+  left: 650px;
+}
+
+.enter-hover:hover {
+
+}
+
+.titleFont {
+  font-family: mainTitleFont;
+  color: pink;
+  opacity: 1;
+  text-align: center;
+  font-size: 100px;
+
+  &.subTitle {
+    color: pink;
+    opacity: 1;
+    text-align: center;
+    font-size: 100px;
+  }
+}
+
+.subTitle {
+  color: white;
+  text-align: center;
+  font-family: subtitleFont;
+}
+
+#main {
+  position: fixed;
+  width: 100%;
+  top: 300px;
+  opacity: 0;
+  animation: animationFrames ease 1s 1s forwards;
+  animation-iteration-count: 1;
+  transform-origin: 50% 50%;
+}
+
+#photos {
+  //position: fixed;
+  z-index: 0;
+}
+
+@keyframes animationFrames{
+  0% {
+    transform:  translate(0px,-25px)  ;
+  }
+
+  100% {
+    opacity: 1;
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+
+.atBottom {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  color: pink;
+  opacity: 0.5;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.8;
+  //background-color: rgba(70,75,83,0.8); /* Black background with opacity */
+  //background-image: linear-gradient(to bottom, #370505, #600815, #8c0a1f, #bb0d29, #eb1231);
+  //background-image: linear-gradient(to right bottom , #010000, #3c1316, #731822, #ae182b, #eb1231);
+
+  //background-image: linear-gradient(to bottom, #221e1e, #5c2232, #93155a, #c30097, #df12eb);
+  // background-image: linear-gradient(to right top, #a60c8f, #830960, #5c0e3a, #340e1d, #0c0002);
+  background-image: linear-gradient(to right top, #87166a, #671652, #49143b, #2d0f25, #14020f);
+  //background: -moz-linear-gradient(top, rgba(201,192,191,0.8) 0%, rgba(241,111,92,0.8) 57%, rgba(240,47,23,1) 81%, rgba(246,41,12,1) 86%, rgba(231,56,39,1) 100%);
+  //background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(201,192,191,0.8)), color-stop(57%, rgba(241,111,92,1)), color-stop(81%, rgba(240,47,23,1)), color-stop(86%, rgba(246,41,12,1)), color-stop(100%, rgba(231,56,39,1)));
+  //background: -webkit-linear-gradient(top, rgba(201,192,191,1) 0%, rgba(241,111,92,1) 57%, rgba(240,47,23,1) 81%, rgba(246,41,12,1) 86%, rgba(231,56,39,1) 100%);
+  //background: -o-linear-gradient(top, rgba(201,192,191,1) 0%, rgba(241,111,92,1) 57%, rgba(240,47,23,1) 81%, rgba(246,41,12,1) 86%, rgba(231,56,39,1) 100%);
+  //background: -ms-linear-gradient(top, rgba(201,192,191,1) 0%, rgba(241,111,92,1) 57%, rgba(240,47,23,1) 81%, rgba(246,41,12,1) 86%, rgba(231,56,39,1) 100%);
+}
+.background-image-class {
+  position: absolute;
+  opacity: 0.5;
+  width: 100%;
+  height: 1700px;
+  top: -10px;
+  left: 0;
+  // transform: scaleX(-1);
+  z-index: -4;
+}
+#background {
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -9999;
+  //opacity: 0.8;
+  //background-color: rgba(70,75,83,0.8); /* Black background with opacity */
+  //background-image: linear-gradient(to bottom, #370505, #600815, #8c0a1f, #bb0d29, #eb1231);
+  //background-image: linear-gradient(to right bottom , #010000, #3c1316, #731822, #ae182b, #eb1231);
+
+  //background-image: linear-gradient(to bottom, #221e1e, #5c2232, #93155a, #c30097, #df12eb);
+  // background-image: linear-gradient(to right top, #a60c8f, #830960, #5c0e3a, #340e1d, #0c0002);
+  background-image: linear-gradient(to right, #342158, #34163c, #2a1025, #1c0913, #000000);
+  //background: -moz-linear-gradient(top, rgba(201,192,191,0.8) 0%, rgba(241,111,92,0.8) 57%, rgba(240,47,23,1) 81%, rgba(246,41,12,1) 86%, rgba(231,56,39,1) 100%);
+  //background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(201,192,191,0.8)), color-stop(57%, rgba(241,111,92,1)), color-stop(81%, rgba(240,47,23,1)), color-stop(86%, rgba(246,41,12,1)), color-stop(100%, rgba(231,56,39,1)));
+  //background: -webkit-linear-gradient(top, rgba(201,192,191,1) 0%, rgba(241,111,92,1) 57%, rgba(240,47,23,1) 81%, rgba(246,41,12,1) 86%, rgba(231,56,39,1) 100%);
+  //background: -o-linear-gradient(top, rgba(201,192,191,1) 0%, rgba(241,111,92,1) 57%, rgba(240,47,23,1) 81%, rgba(246,41,12,1) 86%, rgba(231,56,39,1) 100%);
+  //background: -ms-linear-gradient(top, rgba(201,192,191,1) 0%, rgba(241,111,92,1) 57%, rgba(240,47,23,1) 81%, rgba(246,41,12,1) 86%, rgba(231,56,39,1) 100%);
+}
+@keyframes draw-line {
+  from {
+    width: 0;
+  }
+  to {
+    width: 2000px;
+  }
+}
+
+img {
+  z-index: -3;
+  width: 300px;
+  height: 300px;
+}
+
+
+
+.flip-container {
+  perspective: 1000px;
+}
+
+.flip-container .flipper, .flip-container .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: 480px;
+}
+// Flip speed
+.flipper {
+  -webkit-transition: 0.6s;
+  -moz-transition: 0.6s;
+  //-ms-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
+
+  -webkit-transform-style: preserve-3d;
+  //-moz-transform-style: preserve-3d;
+  //-ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+// Hide back of pane during swap
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: -3;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.practice {
+  display: none;
+}
+

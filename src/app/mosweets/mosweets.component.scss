@@ -1,0 +1,138 @@
+#mosweets {
+  color: white;
+  position: absolute;
+  width: 100%; /* Full width (cover the whole page) */
+  height: 1800px; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 2s;
+  //background-image: linear-gradient(to right top, #8f78e4, #c282d8, #e392cd, #f6a7c8, #ffc0cb);
+  background-image: linear-gradient(to top, #ffc0cb, #f9c9da, #f3d3e5, #eddceb, #ebe5ee);
+  //background-color: black;
+  //background-image: linear-gradient(to top, #5f0145, #7f4978, #9f83a7, #c6bdd1, #f7f7f7);
+   z-index: -9999;
+  //background-image: linear-gradient(to bottom, #c88dba, #cea9cf, #d7c4e0, #e4deed, #f7f7f7);
+  //background-image: linear-gradient(to right, #342158, #34163c, #2a1025, #1c0913, #000000);
+  // background-image: linear-gradient(to top, #777370, #8e827f, #a49093, #b5a0ad, #bfb3ca);
+}
+.background-image-class {
+  position: absolute;
+  opacity: 1;
+  width: 100%;
+  // transform: scaleX(-1);
+  z-index: -4;
+}
+
+.menu-animation img:hover {
+  animation: triggerMenu 0.2s ease-in-out forwards;
+}
+
+@keyframes triggerMenu {
+  100%{transform: rotate(90deg)}
+}
+
+.meal-class {
+  text-align: center;
+  //font-family: mealFont;
+  margin-bottom: 100px;
+}
+.meal-middle-align {
+  text-align: center;
+  //animation: blurAnimation 2s ease-in-out;
+}
+
+.back_button {
+  width: 50px;
+  margin: 15px 15px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.fix-image {
+  //position: fixed;
+}
+
+.shopping_button {
+  width: 50px;
+  margin: 15px 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+$particleSize: 2vmin;
+$animationDuration: 1s;
+$amount: 20;
+.background-candy span {
+  opacity: 1;
+  width: 20px;
+  height: 5px;
+
+  backface-visibility: hidden;
+  position: absolute;
+  //animation: move $animationDuration linear infinite alternate;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  $colors: (
+    #583C87,
+    #E45A84,
+    #FFACAC,
+    #FF0C14,
+    #14B508,
+    #010C5F
+  );
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      //$blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 0 currentColor;
+    }
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 1;
+    border-radius: $particleSize;
+  }
+  100% {
+    transform: translate3d(0, 0, 10px) rotate(-360deg);
+    opacity: 1;
+  }
+}
+
+
+h1 {
+    color: black;
+}
+
+.background-image-class {
+    position: fixed;
+    // background-color: white;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    // transform: scaleX(-1);
+    z-index: -4;
+    animation: candy 3s 3s ease-in-out forwards;
+}
+
+@keyframes candy {
+    0% {
+        filter: blur(0px)
+    }
+    100% {
+        filter: blur(20px);
+    }
+}

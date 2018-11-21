@@ -1,0 +1,72 @@
+img {
+  width: 300px;
+  height: 300px;
+}
+img:hover {
+  transition: all 0.5s ease-in-out;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.menu-container {
+  animation: fadein 1.8s ease-in-out;
+  // -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  // -moz-animation: fadein 2s; /* Firefox < 16 */
+  //  -ms-animation: fadein 2s; /* Internet Explorer */
+  //   -o-animation: fadein 2s; /* Opera < 12.1 */
+  //      animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@font-face {
+  font-family: menuFont;
+  src: url(../../fonts/Montserrat-Medium.ttf);
+}
+
+.menu-subtitle {
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  font-family: menuFont;
+  top: 220px;
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    top: 100px;
+    height: 400px;
+  }
+}
+
+
+.ppp {
+  color: pink;
+  opacity: 1;
+  text-align: center;
+  font-size: 100px;
+}
+
+.bottom {
+  position: fixed;
+  opacity: 0;
+}
+
+.jumbotron {
+  padding: 0px;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-right: 20px;
+  height: 300px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.margin-left-150 {
+  margin-left: 150px !important;
+}

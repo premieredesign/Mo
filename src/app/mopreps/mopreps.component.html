@@ -1,0 +1,40 @@
+<div id="mopreps">
+  <app-menu  *ngIf="toggle"></app-menu>
+  <img class="background-image-class" src="../../assets/imgs/meal_pods/eating.jpeg" alt="">
+  <div class="menu-animation">
+    <img
+      (click)="showMenu()"
+      class="back_button"
+      src="../../assets/imgs/menuIcon.png"
+      alt="back_button">
+  </div>
+    <a href="checkout">
+        <img [hidden]="hasEmpty" class="shopping_button" src="../../assets/imgs/shoppingCart.png" alt="Shop Now">
+        <h6 class="counter">{{ counter }}</h6>
+        <img [hidden]="hasItem" class="shopping_button" src="../../assets/imgs/addItemsButton.png" alt="Shop Now">
+    </a>
+    <div class="meal-class">
+        <h1>Our Meal Plans</h1>
+        <h3>Created for people who love food. Designed to fit your lifestyle.</h3>
+        <h5>You can always mix and match recipes across the full menu, regardless of your plan</h5>
+    </div>
+    <div class="col-xs-12">
+      <div *ngFor="let mealPreps of moPreps" class="margin_each_side_15">
+        <div class="col-xs-4">
+          <div (mouseenter)="handeShow($event)" (mouseleave)="handeShow($event)">
+              <h3>Meal-Plans Classic</h3>
+              <div (click)="handleItemSelected(mealPreps)" class="">
+                  <img [src]="mealPreps.MEALPODIMG" alt="">
+                  <div class="image-overlay">
+                      <img [src]="mealPreps.MEALPODHOVERIMG" alt="">
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<footer class="atBottom">
+    Copyright © 2018 Moriah D Wade
+</footer>
+

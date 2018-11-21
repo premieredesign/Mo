@@ -1,0 +1,126 @@
+#mopreps {
+  color: white;
+  position: absolute; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 1800px;  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -9999;
+  // background-color: black
+  // background-image: radial-gradient(circle, #3d2e3a, #32242f, #271b24, #1d111a, #14020f);
+  background-image: linear-gradient(to right, #342158, #34163c, #2a1025, #1c0913, #000000);
+  // background-image: radial-gradient(circle, #87166a, #671652, #49143b, #2d0f25, #14020f);
+  // background-image: linear-gradient(to right, #87166a, #671652, #49143b, #2d0f25, #14020f);
+  //opacity: 0.8;
+}
+
+.menu-animation img:hover {
+  animation: triggerMenu 0.2s ease-in-out forwards;
+}
+
+@keyframes triggerMenu {
+  100%{transform: rotate(90deg)}
+}
+
+@keyframes blurAnimation {
+    0% {filter: blur(100px)}
+    100% {filter: blur(0px)}
+}
+
+.margin_each_side_15 {
+  margin-left: 15px;
+  margin-right: -15px;
+}
+
+.image-overlay {
+  cursor: pointer;
+    position: absolute;
+    top: 55.5px;
+    bottom: 0;
+    left: 15px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.image-overlay:hover {
+    animation: fadein 0.3s ease-in-out forwards;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0;}
+    to   { opacity: 1;}
+  }
+
+
+.background-image-class {
+  position: fixed;
+  opacity: 0.3;
+  width: 100%;
+  // transform: scaleX(-1);
+  z-index: -4;
+}
+
+.back_button {
+    width: 50px;
+    margin: 15px 15px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.fix-image {
+  position: fixed;
+}
+
+.shopping_button {
+    width: 50px;
+    margin: 15px 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.counter {
+    font-family: mealFont;
+    color: #000000;
+    width: 50px;
+    margin: 15px 15px;
+    position: absolute;
+    top: 20px;
+    right: -15px;
+}
+
+
+
+.show-start:hover {
+    cursor: pointer;
+}
+
+.atBottom {
+    position: absolute;
+    bottom: -900px;
+    right: 10px;
+    color: pink;
+    opacity: 0.5;
+  }
+
+@font-face {
+    font-family: mealFont;
+    src: url(../fonts/Montserrat-Bold.ttf);
+  }
+
+.meal-class {
+    text-align: center;
+    font-family: mealFont;
+    margin-bottom: 100px;
+}
+.meal-middle-align {
+    text-align: center;
+  //animation: blurAnimation 2s ease-in-out;
+}

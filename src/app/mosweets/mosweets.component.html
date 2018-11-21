@@ -1,0 +1,60 @@
+<div id="mosweets">
+  <app-menu *ngIf="toggle"></app-menu>
+  <div class="background-candy">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <img class="background-image-class" src="../../assets/imgs/candy-shop.jpg" alt="">
+  <div class="menu-animation">
+    <img
+      (click)="showMenu()"
+      class="back_button"
+      src="../../assets/imgs/BackButtonSweets.png"
+      alt="back_button">
+  </div>
+    <a href="checkout">
+      <img [hidden]="hasEmpty" class="shopping_button" src="../../assets/imgs/check_out.png" alt="Shop Now">
+      <h6 class="counter">{{ counter }}</h6>
+      <img [hidden]="hasItem" class="shopping_button" src="../../assets/imgs/check_out.png" alt="Shop Now">
+    </a>
+    <div class="meal-class">
+      <h1>Our Edible Delights</h1>
+      <h3>Created for people who love food. Designed to fit your lifestyle.</h3>
+      <h5>You can always mix and match recipes across the full menu, regardless of your plan</h5>
+    </div>
+  <div class="col-xs-12">
+    <div *ngFor="let sweets of moSweets" class="margin_each_side_15">
+      <div class="col-xs-4">
+        <div (mouseenter)="handeShow($event)" (mouseleave)="handeShow($event)">
+          <h3>Meal-Plans Classic</h3>
+          <div (click)="handleItemSelected(sweets)" class="">
+            <img [src]="sweets.MOSWEETIMG" alt="">
+            <div class="image-overlay">
+              <img [src]="sweets.MOSWEETHOVER" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
