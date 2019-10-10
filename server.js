@@ -27,7 +27,7 @@ const errHandler = (err) => {
 };
 
 // Send Home Data
-app.get('/home/data', function(req, res) {
+app.get('api/home/data', function(req, res) {
   const url = 'https://s3.us-east-2.amazonaws.com/mostuff/mo.json';
   getData(url).then(JSON.parse, errHandler)
     .then((results) => {
@@ -36,7 +36,7 @@ app.get('/home/data', function(req, res) {
 });
 
 // Send Mopreps Data
-app.get('/moriah/data', function(req, res) {
+app.get('api/moriah/data', function(req, res) {
   const url = 'https://s3.us-east-2.amazonaws.com/mostuff/MoriahAPI.json';
   getData(url).then(JSON.parse, errHandler)
     .then((results) => {
