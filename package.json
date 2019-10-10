@@ -1,11 +1,16 @@
 {
   "name": "mo",
   "version": "0.0.0",
+  "engines": {
+    "node": "10.15.3",
+    "npm": "6.4.1"
+  },
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "dev": "concurrently --kill-others \"yarn start\" \"yarn node-server\"",
     "engine": "yarn start && yarn run server",
-    "start": "ng serve --proxy-config proxy.config.json -o",
+    "start": "node server.js --proxy-config proxy.config.json",
     "node-server": "nodemon server.js",
     "server": "node server.js",
     "build": "ng build",
