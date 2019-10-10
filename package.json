@@ -7,10 +7,11 @@
   },
   "scripts": {
     "heroku-postbuild": "ng build --prod",
+    "prestart": "yarn add concurrently",
     "ng": "ng",
-    "dev": "concurrently --kill-others \"yarn start\" \"yarn node-server\"",
+    "start": "concurrently --kill-others \"yarn node-client\" \"yarn node-server\"",
     "engine": "yarn start && yarn run server",
-    "start": "yarn node-server && yarn node-client",
+    "dev": "ng serve --proxy-config proxy.config.json",
     "node-client": "ng serve --proxy-config proxy.config.json",
     "node-server": "node server.js",
     "server": "node server.js",
