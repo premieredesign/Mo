@@ -7,7 +7,6 @@
   },
   "scripts": {
     "heroku-postbuild": "ng build --prod",
-    "poststart": "yarn node:client",
     "ng": "ng",
     "start": "node server.js",
     "engine": "yarn start && yarn run server",
